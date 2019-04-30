@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "ndroidmplify-20190429224305-authRole",
+            "UnauthRoleArn": "arn:aws:iam::652411334844:role/ndroidmplify-20190429224305-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::652411334844:role/ndroidmplify-20190429224305-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "ndroidmplify-20190429224305-deployment",
+            "UnauthRoleName": "ndroidmplify-20190429224305-unauthRole",
+            "StackName": "ndroidmplify-20190429224305",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:652411334844:stack/ndroidmplify-20190429224305/19059500-6a8d-11e9-90ad-06e9ec8dfb16"
+        }
+    }
+}
