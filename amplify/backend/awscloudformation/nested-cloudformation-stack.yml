@@ -127,6 +127,33 @@
 					"authSelections": "identityPoolAndUserPool"
 				}
 			}
+		},
+		"functionandroidamplify83ecdf33": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/ndroidmplify-20190429224305-deployment/amplify-cfn-templates/function/androidamplify83ecdf33-cloudformation-template.json",
+				"Parameters": {}
+			}
+		},
+		"apiapi723cef27": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/ndroidmplify-20190429224305-deployment/amplify-cfn-templates/api/api723cef27-cloudformation-template.json",
+				"Parameters": {
+					"functionandroidamplify83ecdf33Name": {
+						"Fn::GetAtt": [
+							"functionandroidamplify83ecdf33",
+							"Outputs.Name"
+						]
+					},
+					"functionandroidamplify83ecdf33Arn": {
+						"Fn::GetAtt": [
+							"functionandroidamplify83ecdf33",
+							"Outputs.Arn"
+						]
+					}
+				}
+			}
 		}
 	},
 	"Outputs": {

@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/ndroidmplify-20190429224305-deployment/amplify-cfn-templates/auth/cognito1b1c51f0-cloudformation-template.yml",
 				"logicalId": "authcognito1b1c51f0"
 			},
-			"lastPushTimeStamp": "2019-04-29T14:52:45.738Z",
+			"lastPushTimeStamp": "2019-05-09T02:01:47.771Z",
 			"output": {
 				"AppClientSecret": "u2arieqedhkn1mrhn01kjvbl81psl2reptqr06sfhpiif8o08rj",
 				"UserPoolId": "ap-southeast-1_MhfHqMbEP",
@@ -30,6 +30,55 @@
 				"UserPoolName": "cognito1b1c51f0_userpool_1b1c51f0"
 			},
 			"lastPushDirHash": "fpyWug6DYzep8vkohyW4gDpiAuo="
+		}
+	},
+	"storage": {},
+	"function": {
+		"androidamplify83ecdf33": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2019-05-09T01:59:42.723Z",
+			"lastPackageTimeStamp": "2019-05-09T01:59:43.958Z",
+			"distZipFilename": "androidamplify83ecdf33-1557367182-latest-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/ndroidmplify-20190429224305-deployment/amplify-cfn-templates/function/androidamplify83ecdf33-cloudformation-template.json",
+				"logicalId": "functionandroidamplify83ecdf33"
+			},
+			"lastPushTimeStamp": "2019-05-09T02:01:47.774Z",
+			"output": {
+				"Region": "ap-southeast-1",
+				"Arn": "arn:aws:lambda:ap-southeast-1:652411334844:function:androidamplify83ecdf33",
+				"Name": "androidamplify83ecdf33"
+			},
+			"lastPushDirHash": "VBvpjEr5OCgnbE9tpPRhlPNpU6M="
+		}
+	},
+	"api": {
+		"api723cef27": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "androidamplify83ecdf33",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/ndroidmplify-20190429224305-deployment/amplify-cfn-templates/api/api723cef27-cloudformation-template.json",
+				"logicalId": "apiapi723cef27"
+			},
+			"lastPushTimeStamp": "2019-05-09T02:01:47.774Z",
+			"output": {
+				"ApiName": "api723cef27",
+				"RootUrl": "https://76lbrvd71e.execute-api.ap-southeast-1.amazonaws.com/Prod"
+			},
+			"lastPushDirHash": "IrDfKL4Ak1fioVwHX4crqWSHIYg="
 		}
 	}
 }

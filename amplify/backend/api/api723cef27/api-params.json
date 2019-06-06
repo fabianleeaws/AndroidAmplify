@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "androidamplify83ecdf33",
+            "privacy": {
+                "private": true,
+                "auth": "rw"
+            }
+        }
+    ],
+    "resourceName": "api723cef27",
+    "apiName": "androidamplify723cef27",
+    "functionArns": [
+        {
+            "lambdaFunction": "androidamplify83ecdf33"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "ndroidmplify-20190429224305-authRole",
+        "unAuthRoleName": "ndroidmplify-20190429224305-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "androidamplify83ecdf33",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
